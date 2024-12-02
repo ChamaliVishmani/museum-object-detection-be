@@ -1,5 +1,6 @@
 package com.chamdev.museumproject.model;
 
+import com.chamdev.museumproject.utils.enums.CategoryType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,9 +18,12 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+    private CategoryType name;
 
     @OneToMany(mappedBy = "category")
     private List<Object> objects;
 
+    public Category(CategoryType name) {
+        this.name = name;
+    }
 }
