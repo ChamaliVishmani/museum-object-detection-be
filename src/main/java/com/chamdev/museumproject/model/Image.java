@@ -25,6 +25,6 @@ public class Image {
     private String downloadUrl;
 
     @ManyToOne
-    @JoinColumn(name = "object_id")
-    private Object object;
+    @JoinColumn(name = "museum_object_id")
+    private MuseumObject museumObject;
 }

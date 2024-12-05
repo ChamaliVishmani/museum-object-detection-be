@@ -21,7 +21,7 @@ public class Category {
     private CategoryType name;
 
     @OneToMany(mappedBy = "category")
-    private List<Object> objects;
+    private List<MuseumObject> museumObjects;
 
     public Category(CategoryType name) {
         this.name = name;

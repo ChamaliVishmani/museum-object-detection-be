@@ -1,1 +1,1 @@
-# museum-object-detection-v2
+# museum-museumObject-detection-v2

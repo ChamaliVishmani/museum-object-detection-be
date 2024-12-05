@@ -13,10 +13,11 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Object {
+public class MuseumObject {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long detectionLabelId;
     private String name;
     private String description;
 
@@ -24,7 +25,7 @@ public class Object {
     @JoinColumn(name = "category_id")
     private Category category;
 
-    @OneToMany(mappedBy = "object",cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "museumObject",cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Image> images;
 
 }
